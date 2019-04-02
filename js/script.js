@@ -85,6 +85,9 @@ const changeBackground = () => {
   document.body.style.backgroundColor = `rgb(${getRandomNumber(256)}, ${getRandomNumber(256)}, ${getRandomNumber(256)})`;
 }
 
+// change quote automatically every 20s
+const autoChange = setInterval(printQuote, 20000);
+
 // when button with id='loadQuote' is clicked, background color changes
 document.getElementById('loadQuote').addEventListener("click", changeBackground, false);
 
