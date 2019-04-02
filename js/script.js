@@ -59,3 +59,23 @@ const getRandomNumber = number => Math.floor(Math.random() * number)
 
 // function to get a random quote from quotes array
 const getRandomQuote = () => quotes[getRandomNumber(quotes.length)]
+
+// function to change index.html to show randomly selected quote
+// and check if citation, year and tag properties exists in quote objects
+const printQuote = () => {
+  const randomQuote = getRandomQuote();
+  let HTML = '';
+        HTML += `<p class="quote">${randomQuote.quote}</p>`;
+        HTML += `<p class="source">${randomQuote.source}`;
+        if (randomQuote.citation) {
+          HTML += `<span class="citation">${randomQuote.citation}</span>`;
+        }
+        if(randomQuote.year) {
+          HTML += `<span class="year">${randomQuote.year}</span>`;
+        }
+        HTML += `</p>`;
+        if(randomQuote.tags) {
+          HTML += `<p class="tags">${randomQuote.tags}</p>`;
+        }
+  document.getElementById('quote-box').innerHTML = HTML;
+}
