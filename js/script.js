@@ -79,3 +79,14 @@ const printQuote = () => {
         }
   document.getElementById('quote-box').innerHTML = HTML;
 }
+
+// function to assign a random rgb color to <body> element
+const changeBackground = () => {
+  document.body.style.backgroundColor = `rgb(${getRandomNumber(256)}, ${getRandomNumber(256)}, ${getRandomNumber(256)})`;
+}
+
+// when button with id='loadQuote' is clicked, background color changes
+document.getElementById('loadQuote').addEventListener("click", changeBackground, false);
+
+// when button with id='loadQuote' is clicked, quote changes
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
