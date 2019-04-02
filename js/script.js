@@ -53,3 +53,9 @@ const quotes = [
       tags: "sports"
   }
 ];
+
+// function to generate random number
+const getRandomNumber = number => Math.floor(Math.random() * number)
+
+// function to get a random quote from quotes array
+const getRandomQuote = () => quotes[getRandomNumber(quotes.length)]
