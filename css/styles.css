@@ -3,7 +3,7 @@
  * Random Quote Generator - CSS
  */
 
-body {
+ body {
   background-color: #36b55c;
   color: white;
   font-family: 'Playfair Display', serif;
@@ -11,7 +11,7 @@ body {
 
 #quote-box {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 10%;
   right: 10%;
   width: 80%;
@@ -45,7 +45,7 @@ body {
   position: absolute;
 }
 
-.source {
+.source, .tags {
   font-size: 1rem;
   letter-spacing: 0.05em;
   line-height: 1.1;
@@ -54,7 +54,7 @@ body {
 }
 
 .source:before {
-  content: "—";
+  content: "— ";
 }
 
 .citation {
@@ -71,22 +71,28 @@ body {
   font-style: normal;
 }
 
+/* added */
+.tags:before {
+  content: "tags: ";
+  font-style: italic;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
   display: inline-block;
   left: 50%;
   margin-left: -6em;
-  bottom: 150px;
+  bottom: 75px; 
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: transparent;
   padding: 15px 0;
   transition: .5s ;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255,255,255,.55);
 }
 
 #loadQuote:focus {
@@ -100,7 +106,7 @@ body {
   .quote:before, .quote:after {
     font-size: 6rem;
   }
-  .source {
+  .source, .tags {
     font-size: 1.25rem;
   }
 }
