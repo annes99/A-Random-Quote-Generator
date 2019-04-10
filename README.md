@@ -32,5 +32,6 @@ Treehouse FSJS Techdegree: project 1 - A Random Quote Generator
 
 ## Contact
 
-Created by [@Annes99](https://github.com/annes99)
+Created by [@Annes99](https://twitter.com/annesCode)
+
 [https://github.com/annes99](https://github.com/annes99)
